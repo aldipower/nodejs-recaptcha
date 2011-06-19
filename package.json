@@ -1,7 +1,7 @@
 {
   "name": "recaptcha-async",
   "description": "Handles calling reCAPTCHA asyncronously.",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "author": "Felix Gertz <nihil.baxter.dev@gmail.com>",
   "contributors": [ 
     { "name": "Felix Gertz", "email": "nihil.baxter.dev@gmail.com" }
@@ -9,6 +9,7 @@
   "dependencies": {
   },
   "keywords": ["recaptcha", "captcha", "web"],
+  "homepage": "https://github.com/aldipower/nodejs-recaptcha",
   "repository": "git://github.com/aldipower/nodejs-recaptcha.git",
   "main": "index",
   "engines": { "node": ">= 0.4.1" }
