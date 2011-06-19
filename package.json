@@ -1,6 +1,6 @@
 {
-  "name": "recaptcha",
-  "description": "Handles calling reCAPTCHA.",
+  "name": "recaptcha-async",
+  "description": "Handles calling reCAPTCHA asyncronously.",
   "version": "0.0.1",
   "author": "Felix Gertz <nihil.baxter.dev@gmail.com>",
   "contributors": [ 

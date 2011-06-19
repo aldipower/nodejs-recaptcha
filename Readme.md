@@ -19,11 +19,11 @@
 
 ## Installation
 
-    $ npm install recaptcha
+    $ npm install recaptcha-async
 
 or to access the recaptcha module install globally:
 
-    $ npm install -g recaptcha
+    $ npm install -g recaptcha-async
 
 
 ## Features
