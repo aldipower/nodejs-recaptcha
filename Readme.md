@@ -2,20 +2,31 @@
 # reCaptcha
       
   Calling the reCaptcha server from within Node.JS and the handle the response.
-  
-     var recaptcha = new reCaptcha();
+ 
+    var recap = require('recaptcha-async');
+    var recaptcha = new recap.reCaptcha();
+    recaptcha.on('data', function (res,obj) {
+        if ((res.error !== undefined) && (res.error == 'success')) {
+            html = "Good job.";
+            // perhaps do some auth stuff with information passed in obj
+            obj.res.redirect('back');
+        }
+        else {
+            html = recaptcha.getCaptchaHtml(argv.r, res.error);
+            // we've tunneled req
+            // perhaps set some session information on req
+            obj.req.session.error = {};
+            obj.req.session.error.recaptcha = true;
+            obj.res.redirect('back');
+        }
+    });
 
-     recaptcha.on('data', function (res) {
-       if(res.is_valid)
-         html = "valid answer";
-       else
-         html = recaptcha.getCaptchaHtml(mypublickey, res.error);
-     });
-
-     recaptcha.checkAnswer(myprivatekey, 
-                           req.connection.remoteAddress, 
-                           req.body.recaptcha_challenge_field, 
-                           req.body.recaptcha_response_field);
+    recaptcha.checkAnswer(privatekey,
+    apiURLRemoteAddress,
+    recaptcha_challenge_field,
+    recaptcha_response_field,
+    {res:res,req:req,anything:else});
+ 
 
 ## Installation
 
