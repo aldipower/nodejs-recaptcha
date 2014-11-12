@@ -3,7 +3,8 @@
       
   Calling the reCaptcha server from within Node.JS and the handle the response.
   
-     var recaptcha = new reCaptcha();
+     var recaptcha_async = require('recaptcha-async'),
+     var recaptcha = new recaptcha_async.reCaptcha();
 
      recaptcha.on('data', function (res) {
        if(res.is_valid)
